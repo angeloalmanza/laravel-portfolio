@@ -36,6 +36,6 @@
         <textarea name="description" id="description" width="100%" rows="5"></textarea>
     </div>
 
-    <input type="submit" value="Crea">
+    <input type="submit" class="btn btn-primary" value="Crea">
 </form>
 @endsection
