@@ -26,6 +26,7 @@ class ProjectsTableSeeder extends Seeder
             $newProject->start_date = $startDate->format('Y-m-d');
             $newProject->end_date = $endDate->format('Y-m-d');
             $newProject->description = $faker->paragraphs(3, true);
+            $newProject->type = $faker->randomElement(['Software', 'Hardware', 'Marketing']);
 
             $newProject->save();
         }

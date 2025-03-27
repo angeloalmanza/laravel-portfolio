@@ -7,9 +7,7 @@
   <thead>
     <tr>
       <th scope="col">Nome progetto</th>
-      <th scope="col">Cliente</th>
-      <th scope="col">Data inizio</th>
-      <th scope="col">Data fine</th>
+      <th scope="col">Tipologia</th>
       <th scope="col"></th>
     </tr>
   </thead>
@@ -17,12 +15,12 @@
     @foreach($projects as $project)
     <tr>
       <td>{{$project->name}}</td>
-      <td>{{$project->client}}</td>
-      <td>{{$project->start_date}}</td>
-      <td>{{$project->end_date}}</td>
+      <td>{{$project->type}}</td>
       <td><a href="{{route("projects.show", $project)}}">Dettagli</a></td>
     </tr>
     @endforeach
   </tbody>
 </table>
+
+<a href="{{route("projects.create")}}" class="btn btn-primary">Crea un nuovo progetto</a>
 @endsection
