@@ -6,7 +6,7 @@
 <div class="card" style="width: 18rem;">
   <div class="card-body">
     <p><strong>Cliente:</strong> {{$project->client}}</p>
-    <p><strong>Tipologia:</strong> {{$project->type}}</p>
+    <p><strong>Tipologia:</strong> {{$project->type->name}}</p>
     <p>{{$project->start_date}} - {{$project->end_date}}</p>
     <p class="card-text">{{$project->description}}</p>
   </div>

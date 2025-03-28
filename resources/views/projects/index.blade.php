@@ -17,7 +17,7 @@
     @foreach($projects as $project)
     <tr>
       <td>{{$project->name}}</td>
-      <td>{{$project->type}}</td>
+      <td>{{$project->type->name}}</td>
       <td><a href="{{route("projects.show", $project)}}" class="btn btn-outline-primary">Dettagli</a></td>
       <td><a href="{{route("projects.edit", $project)}}" class="btn btn-outline-warning">Modifica</a></td>
       <td><button type="button" class="btn btn-outline-danger" data-bs-toggle="modal" data-bs-target="#exampleModal">Elimina</button></td>
