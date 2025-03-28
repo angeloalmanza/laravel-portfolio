@@ -22,5 +22,7 @@
             </div>
         </div>
     </div>
+
+    <a href="{{route('projects.index')}}" class="btn btn-primary mt-4">Vai ai tuoi progetti!</a>
 </div>
 @endsection
