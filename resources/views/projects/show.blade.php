@@ -7,6 +7,11 @@
   <div class="card-body">
     <p><strong>Cliente:</strong> {{$project->client}}</p>
     <p><strong>Tipologia:</strong> {{ $project->type->name ?? '-' }}</p>
+    @if(count($project->technologies) > 0)
+      @foreach($project->technologies as $technology)
+        <span class="badge mb-3" style="background-color: {{$technology->color}}">{{$technology->name}}</span>
+      @endforeach
+    @endif
     <p>{{$project->start_date}} - {{$project->end_date}}</p>
     <p class="card-text">{{$project->description}}</p>
   </div>
@@ -16,6 +21,8 @@
   <a href="{{route("projects.edit", $project)}}" class="btn btn-outline-warning">Modifica</a>
 
   <button type="button" class="btn btn-outline-danger" data-bs-toggle="modal" data-bs-target="#exampleModal">Elimina</button>
+
+  <a href="{{route("projects.index")}}" class="btn btn-primary">Torna ai progetti</a>
 </div>
 
 

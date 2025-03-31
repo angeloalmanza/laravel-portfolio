@@ -5,7 +5,7 @@ namespace Database\Seeders;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use App\Models\Project;
-
+use App\Models\Technology;
 use Faker\Generator as Faker;
 
 class ProjectsTableSeeder extends Seeder
@@ -29,6 +29,10 @@ class ProjectsTableSeeder extends Seeder
             $newProject->type_id = rand(1,3);
 
             $newProject->save();
+
+            $technologies = Technology::inRandomOrder()->limit(2)->pluck('id')->toArray();
+            // dd($technologies);
+            $newProject->technologies()->sync($technologies);
         }
     }
 }

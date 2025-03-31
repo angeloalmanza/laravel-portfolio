@@ -13,6 +13,8 @@
   <a href="{{route("types.edit", $type)}}" class="btn btn-outline-warning">Modifica</a>
 
   <button type="button" class="btn btn-outline-danger" data-bs-toggle="modal" data-bs-target="#exampleModal">Elimina</button>
+
+  <a href="{{route("types.index")}}" class="btn btn-primary">Torna ai progetti</a>
 </div>
 
 
